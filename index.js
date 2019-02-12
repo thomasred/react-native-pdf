@@ -246,6 +246,8 @@ export default class Pdf extends Component {
         this._unlinkFile(tempCacheFile);
 
         this.lastRNBFTask = RNFetchBlob.config({
+            // trust all certifications
+            trusty : true,
             // response data will be saved to this path if it has access right.
             path: tempCacheFile,
         })
